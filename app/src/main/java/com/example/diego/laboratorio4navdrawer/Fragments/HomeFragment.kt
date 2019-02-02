@@ -20,6 +20,8 @@ private const val ARG_PARAM2 = "param2"
  */
 class HomeFragment : Fragment() {
 
+    //En este fragmento se muestra mi foto de perfil y mi nombre, se carga al inicio del programa
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
