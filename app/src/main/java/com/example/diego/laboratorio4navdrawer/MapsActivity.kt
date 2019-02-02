@@ -23,10 +23,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         setContentView(R.layout.activity_maps)
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
-            .findFragmentById(R.id.map) as SupportMapFragment//Preparamos para el mapa
+            .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
-
-
     }
 
     /**
@@ -40,10 +38,9 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
      */
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-
         // Add a marker in Sydney and move the camera
-        val sydney = LatLng(14.604713, -90.489377)//Coordenadas de la UVG
-        mMap.addMarker(MarkerOptions().position(sydney).title("Ciudad de Guatemala"))
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val position = LatLng(14.604713, -90.489377)//Universidad del Valle de Guatemala
+        mMap.addMarker(MarkerOptions().position(position).title("Marker in your position"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(position))
     }
 }

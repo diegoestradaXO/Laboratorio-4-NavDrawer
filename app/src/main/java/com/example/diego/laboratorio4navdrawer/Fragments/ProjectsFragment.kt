@@ -40,7 +40,6 @@ class ProjectsFragment : Fragment() {
         return  view
 
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val project1 = Project(
@@ -48,8 +47,8 @@ class ProjectsFragment : Fragment() {
             "https://github.com/diegoestradaXO/Restaurant-Menu-Lab2"
         )
         val project2 = Project(
-            "App de Contactos",
-            "https://github.com/suulcoder/PlataformasMoviles/tree/master/MIsContactos"
+            "Proyecto para App de Contactos",
+            "https://github.com/diegoestradaXO/App-de-Contactos---Lab3"
         )
         val list: ArrayList<Project> =  ArrayList()
         list.add(project1)

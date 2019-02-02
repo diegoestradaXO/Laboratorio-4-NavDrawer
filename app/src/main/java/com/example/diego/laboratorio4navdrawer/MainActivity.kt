@@ -70,7 +70,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.nav_direction -> {//Fragmento de mapa, abre una vista de mapa de Guatemala
                 val intent = Intent(applicationContext, MapsActivity::class.java)
-                startActivity(intent)
+                startActivity(intent)//Se carga la Activity de Mapa
             }
         }
 
