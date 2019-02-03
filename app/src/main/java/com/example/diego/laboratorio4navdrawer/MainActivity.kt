@@ -32,9 +32,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         nav_view.setNavigationItemSelectedListener(this)
         LoadFragment(HomeFragment())//Se carga e inicializa el fragmento de Inicio, foto y nombre
     }
-
-
-
     override fun onBackPressed() {
         if (drawer_layout.isDrawerOpen(GravityCompat.START)) {
             drawer_layout.closeDrawer(GravityCompat.START)
@@ -42,13 +39,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             super.onBackPressed()
         }
     }
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
     }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -73,7 +68,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 startActivity(intent)//Se carga la Activity de Mapa
             }
         }
-
         drawer_layout.closeDrawer(GravityCompat.START)
         return true
     }
@@ -81,5 +75,4 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val manager = supportFragmentManager
         manager.beginTransaction().replace(R.id.fragment_container , fragment).commit()
     }
-
 }

@@ -23,6 +23,5 @@ class WebViewActivity : AppCompatActivity() {
             }
         }
         mywebview!!.loadUrl(getIntent().getStringExtra("link"))//Se utliiza el extra enviado en el fragmento Project
-
     }
 }
